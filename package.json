@@ -16,18 +16,10 @@
     "lint-staged": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.vue": [
-      "stylelint --fix",
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.{css,scss}": [
-      "stylelint --fix",
-      "prettier --write"
+    "src/**/*.{js,ts,vue}": [
+      "npm run lint",
+      "eslint --fix",
+      "git add"
     ]
   },
   "dependencies": {
