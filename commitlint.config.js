@@ -7,6 +7,7 @@ module.exports = {
       [
         "feat",
         "fix",
+        "publish",
         "chore",
         "docs",
         "style",
