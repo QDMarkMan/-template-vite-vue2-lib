@@ -8,12 +8,12 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 2020,
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
   env: {
     browser: true,
-    node: true,
+    node: true
   },
   plugins: ['@typescript-eslint'],
   extends: [
@@ -21,13 +21,13 @@ module.exports = {
     'plugin:vue/strongly-recommended',
     'eslint:recommended',
     '@vue/eslint-config-typescript/recommended',
-    '@vue/eslint-config-prettier',
+    '@vue/eslint-config-prettier'
   ],
   overrides: [
     {
       files: ['cypress/e2e/**.{cy,spec}.{js,ts,jsx,tsx}'],
-      extends: ['plugin:cypress/recommended'],
-    },
+      extends: ['plugin:cypress/recommended']
+    }
   ],
   rules: {
     // common
@@ -56,8 +56,8 @@ module.exports = {
         js: 'never',
         jsx: 'never',
         ts: 'never',
-        tsx: 'never',
-      },
+        tsx: 'never'
+      }
     ],
     'import/prefer-default-export': 0,
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
@@ -68,6 +68,6 @@ module.exports = {
     'no-underscore-dangle': 0,
     'import/no-mutable-exports': 0,
     'import/no-cycle': [0, { ignoreExternal: true }],
-    'no-await-in-loop': 0,
-  },
+    'no-await-in-loop': 0
+  }
 }

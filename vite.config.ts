@@ -21,16 +21,16 @@ export default ({ mode }) => {
       lib: {
         entry: resolve(__dirname, './src/lib.ts'),
         name: pkg.name,
-        fileName: pkg.name,
+        fileName: pkg.name
       },
       rollupOptions: {
         external: ['vue', 'element-ui'],
         output: {
           globals: {
-            vue: 'Vue',
-          },
-        },
-      },
+            vue: 'Vue'
+          }
+        }
+      }
     },
 
     plugins: [
@@ -41,14 +41,14 @@ export default ({ mode }) => {
         ? legacy()
         : babel({
             babelHelpers: 'runtime',
-            extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', 'ts'],
-          }),
+            extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', 'ts']
+          })
     ],
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
-        'sar-core': fileURLToPath(new URL('./src', import.meta.url)),
-      },
-    },
+        'sar-core': fileURLToPath(new URL('./src', import.meta.url))
+      }
+    }
   })
 }

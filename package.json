@@ -1,5 +1,5 @@
 {
-  "name": "sar-core",
+  "name": "@template/vite-vue2-lib",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite --host",
@@ -15,7 +15,7 @@
     "// ---------- Lint & check ----------": "",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
+    "format:prettier": "prettier --write  \"src/**/*.{js,ts,json,tsx,css,less,scss,vue,html,md}\"",
     "lint-staged": "npx lint-staged",
     "// ---------- Project init ----------": "",
     "prepare": "husky install"
