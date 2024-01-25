@@ -4,4 +4,4 @@
  *  @Date [2024-01-24 15:32:03].
  *  @Description Package entry.
  ***************************************************************************/
-export * as Welcome from 'sar-core/components/TheWelcome.vue'
+export * as Welcome from 'lib-name/components/TheWelcome.vue'

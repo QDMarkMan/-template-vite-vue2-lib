@@ -47,7 +47,7 @@ export default ({ mode }) => {
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
-        'sar-core': fileURLToPath(new URL('./src', import.meta.url))
+        'lib-name': fileURLToPath(new URL('./src', import.meta.url))
       }
     }
   })
