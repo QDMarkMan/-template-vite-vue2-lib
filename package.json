@@ -3,28 +3,33 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite --host",
+    "// ---------- Build command ----------": "",
     "build": "vite build",
     "build:app": "BUILD_MODE=app run-p type-check build-only",
+    "build-only": "vite build",
     "preview": "vite preview --port 4173",
+    "// ---------- Test command ----------": "",
     "test:unit": "vitest --environment jsdom",
     "test:e2e": "start-server-and-test preview http://localhost:4173/ 'cypress open --e2e'",
     "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ 'cypress run --e2e'",
-    "build-only": "vite build",
+    "// ---------- Lint & check ----------": "",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
-    "lint-staged": "npx lint-staged"
+    "lint-staged": "npx lint-staged",
+    "// ---------- Project init ----------": "",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "echo \"git commit trigger husky pre-commit hook\" "
     }
   },
   "lint-staged": {
     "src/**/*.{js,ts,vue}": [
       "npm run lint",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "dependencies": {
@@ -34,6 +39,8 @@
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.23.7",
     "@babel/preset-env": "^7.23.8",
+    "@commitlint/cli": "^18.5.0",
+    "@commitlint/config-conventional": "^18.5.0",
     "@rollup/plugin-babel": "^6.0.4",
     "@types/jsdom": "^16.2.14",
     "@types/node": "^16.11.45",

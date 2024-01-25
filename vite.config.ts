@@ -11,7 +11,7 @@ import legacy from '@vitejs/plugin-legacy'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
-  console.log('🚀 ~ mode:', mode)
+  console.log('🚀 ~ Current build mode:', mode)
   return defineConfig({
     build: {
       target: ['es2015', 'chrome86'],
