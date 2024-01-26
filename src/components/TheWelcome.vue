@@ -31,13 +31,11 @@ import SupportIcon from './icons/IconSupport.vue'
     <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
     <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
     you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank" rel="noopener"
-      >Cypress Component Testing</a
+    <a href="https://playwright.dev/" target="_blank" rel="noopener">Playwright</a> and
+    <a href="https://playwright.dev/docs/writing-tests" target="_blank" rel="noopener"
+      >Playwright Component Testing</a
     >.
-
     <br />
-
     More instructions are available in <code>README.md</code>.
   </WelcomeItem>
 

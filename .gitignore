@@ -14,8 +14,10 @@ dist-ssr
 *.local
 lib
 
-/cypress/videos/
-/cypress/screenshots/
+# test
+playwright-report
+playwright-video
+test-results
 
 # Editor directories and files
 .vscode

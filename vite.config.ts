@@ -9,27 +9,37 @@ import eslint from 'vite-plugin-eslint'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
-  console.log('🚀 ~ Current build mode:', mode)
+  console.log(
+    '🚀 ~ Current build mode:',
+    mode,
+    '🚀 ~ Current build target:',
+    process.env.BUILD_TARGET
+  )
+
+  const isBuildApp = process.env.BUILD_TARGET === 'app'
+
   return defineConfig({
-    build: {
-      target: ['es2015', 'chrome86'],
-      outDir: resolve(__dirname, 'lib'),
-      minify: 'terser',
-      reportCompressedSize: true,
-      lib: {
-        entry: resolve(__dirname, './src/lib.ts'),
-        name: pkg.name,
-        fileName: pkg.name
-      },
-      rollupOptions: {
-        external: ['vue'],
-        output: {
-          globals: {
-            vue: 'Vue'
+    build: isBuildApp
+      ? {}
+      : {
+          target: ['es2015', 'chrome86'],
+          outDir: resolve(__dirname, 'lib'),
+          minify: 'terser',
+          reportCompressedSize: true,
+          lib: {
+            entry: resolve(__dirname, './src/lib.ts'),
+            name: pkg.name,
+            fileName: pkg.name
+          },
+          rollupOptions: {
+            external: ['vue'],
+            output: {
+              globals: {
+                vue: 'Vue'
+              }
+            }
           }
-        }
-      }
-    },
+        },
     plugins: [eslint(), vue(), jsx()],
     resolve: {
       alias: {
