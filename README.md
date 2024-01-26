@@ -1,6 +1,6 @@
-# @template/vite-vue2-lib
+# @template/vite-vue-lib
 
-This template should help get you started developing with Vue 2 in Vite.
+This template should help get you started developing with Vue and Vite.
 
 ## Recommended IDE Setup
 

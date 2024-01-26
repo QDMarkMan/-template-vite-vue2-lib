@@ -3,8 +3,6 @@
     <i>
       <slot name="icon"></slot>
     </i>
-
-    <el-button>Test</el-button>
     <div class="details">
       <h3>
         <slot name="heading"></slot>
@@ -18,6 +16,7 @@
 .item {
   margin-top: 2rem;
   display: flex;
+  position: relative;
 }
 
 .details {

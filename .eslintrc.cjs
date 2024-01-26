@@ -1,33 +1,15 @@
 /* eslint-env node */
 module.exports = {
   root: true,
-  parser: 'vue-eslint-parser',
   parserOptions: {
-    // Parser that checks the content of the <script> tag
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module',
-    ecmaVersion: 2020,
-    ecmaFeatures: {
-      jsx: true
-    }
+    ecmaVersion: 'latest'
   },
-  env: {
-    browser: true,
-    node: true
-  },
-  plugins: ['@typescript-eslint'],
   extends: [
     'standard',
-    'plugin:vue/strongly-recommended',
     'eslint:recommended',
+    'plugin:vue/vue3-essential',
     '@vue/eslint-config-typescript/recommended',
     '@vue/eslint-config-prettier'
-  ],
-  overrides: [
-    {
-      files: ['cypress/e2e/**.{cy,spec}.{js,ts,jsx,tsx}'],
-      extends: ['plugin:cypress/recommended']
-    }
   ],
   rules: {
     // common

@@ -3,11 +3,9 @@ import { resolve } from 'node:path'
 import * as pkg from './package.json'
 
 import { defineConfig } from 'vite'
-import vue2 from '@vitejs/plugin-vue2'
-import vue2Jsx from '@vitejs/plugin-vue2-jsx'
+import vue from '@vitejs/plugin-vue'
+import jsx from '@vitejs/plugin-vue-jsx'
 import eslint from 'vite-plugin-eslint'
-import { babel } from '@rollup/plugin-babel'
-import legacy from '@vitejs/plugin-legacy'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
@@ -24,7 +22,7 @@ export default ({ mode }) => {
         fileName: pkg.name
       },
       rollupOptions: {
-        external: ['vue', 'element-ui'],
+        external: ['vue'],
         output: {
           globals: {
             vue: 'Vue'
@@ -32,18 +30,7 @@ export default ({ mode }) => {
         }
       }
     },
-
-    plugins: [
-      eslint(),
-      vue2(),
-      vue2Jsx(),
-      mode === 'development'
-        ? legacy()
-        : babel({
-            babelHelpers: 'runtime',
-            extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', 'ts']
-          })
-    ],
+    plugins: [eslint(), vue(), jsx()],
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
