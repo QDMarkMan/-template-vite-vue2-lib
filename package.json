@@ -1,7 +1,10 @@
 {
   "name": "@template/vite-vue-lib",
+  "description": "A Template For Vue 3 Component Library.",
   "version": "1.0.0",
   "type": "module",
+  "main": "lib/lib-name.js",
+  "types": "./types",
   "scripts": {
     "dev": "vite --host",
     "// ---------- Build command ----------": "",

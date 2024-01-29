@@ -1,6 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
 import { resolve } from 'node:path'
-import * as pkg from './package.json'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -9,14 +8,10 @@ import eslint from 'vite-plugin-eslint'
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
-  console.log(
-    '🚀 ~ Current build mode:',
-    mode,
-    '🚀 ~ Current build target:',
-    process.env.BUILD_TARGET
-  )
+  console.log('🚀 ~ Current build mode:', mode)
 
   const isBuildApp = process.env.BUILD_TARGET === 'app'
+  const name = 'lib-name'
 
   return defineConfig({
     build: isBuildApp
@@ -28,8 +23,8 @@ export default ({ mode }) => {
           reportCompressedSize: true,
           lib: {
             entry: resolve(__dirname, './src/lib.ts'),
-            name: pkg.name,
-            fileName: pkg.name
+            name,
+            fileName: name
           },
           rollupOptions: {
             external: ['vue'],
