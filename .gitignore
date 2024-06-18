@@ -15,10 +15,9 @@ dist-ssr
 lib
 
 # test
-# playwright-report
+playwright-report
 playwright-video
-# test-results
-# lib
+test-results
 
 # Editor directories and files
 .vscode
