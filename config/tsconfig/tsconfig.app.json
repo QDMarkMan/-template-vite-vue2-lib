@@ -1,0 +1,13 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": [
+    "../../packages",
+    "../../types"
+  ],
+  "exclude": ["../../src/**/__tests__/*"],
+  "compilerOptions": {
+    "ignoreDeprecations": "5.0",
+    "verbatimModuleSyntax": true,
+    "composite": true
+  }
+}

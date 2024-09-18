@@ -3,4 +3,4 @@
  *  @Email [etongfu@outlook.com].
  *  @Date [2024-06-18 10:41:52].
  *-------------------------------------------------------------------------------------------- */
-export * as Welcome from 'lib-name/components/TheWelcome.vue'
+export * as Welcome from 'packages/app/components/TheWelcome.vue'

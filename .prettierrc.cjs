@@ -1,9 +1,10 @@
+/** ---------------------------------------------------------------------------------------------
+ *  @Author [Tongfu.E].
+ *  @Email [etongfu@outlook.com].
+ *  @Date [2024-09-18 17:53:07].
+ *-------------------------------------------------------------------------------------------- */
+const config = require('./config/prettier/prettier.cjs')
+
 module.exports = {
-	semi: false,
-  singleQuote: true,
-  trailingComma: 'none',
-  quoteProps: 'consistent',
-  htmlWhitespaceSensitivity: 'strict',
-  proseWrap: 'never',
-  endOfLine: 'auto'
-};
+	...config
+}

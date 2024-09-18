@@ -1,14 +1,29 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.config.json"
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "ESNext",
+    "target": "ES2015",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsxImportSource": "vue",
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["./*"],
+      "packages": ["./packages/*"],
     },
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.vitest.json"
-    }
-  ]
+    "lib": ["ESNext", "dom"],
+    "skipLibCheck": true
+  },
+  "include": [
+    "packages/**/*.ts",
+    "tests/**/*.ts",
+    "types/**/*.ts",
+    "vite.config.ts",
+  ],
+  "exclude": ["node_modules", "tests/server/**/*.ts", "dist", "**/*.js"]
 }
