@@ -21,6 +21,9 @@ devDependencies:
   '@playwright/test':
     specifier: ^1.41.1
     version: 1.41.1
+  '@tsconfig/node18':
+    specifier: ^18.2.4
+    version: 18.2.4
   '@types/jsdom':
     specifier: ^21.1.7
     version: 21.1.7
@@ -2122,6 +2125,10 @@ packages:
   /@trysound/sax@0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
+    dev: true
+
+  /@tsconfig/node18@18.2.4:
+    resolution: {integrity: sha512-5xxU8vVs9/FNcvm3gE07fPbn9tl6tqGGWA9tSlwsUEkBxtRnTsNmwrV8gasZ9F/EobaSv9+nu8AxUKccw77JpQ==}
     dev: true
 
   /@types/eslint@8.56.12:
