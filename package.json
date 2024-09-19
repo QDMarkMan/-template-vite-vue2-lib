@@ -31,7 +31,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,ts,vue}": [
+    "packages**/*.{js,jsx,ts,tsx,vue}": [
       "npm run lint",
       "eslint --fix"
     ]
