@@ -5,13 +5,17 @@
  *  @Description Vitest config.
  ************************************************************************** */
 /// <reference types="vitest" />
+import { fileURLToPath } from 'node:url'
+import { configDefaults } from 'vitest/config'
 
 export default {
-  include: ['src/**/*.spec.ts'],
-  server: {
-    deps: {
-      inline: ['element-plus']
-    }
-  },
-  environment: 'happy-dom'
+  environment: 'happy-dom',
+  include: ['**/*.spec.ts'],
+  exclude: [...configDefaults.exclude, 'e2e/*'],
+  root: fileURLToPath(new URL('../../../', import.meta.url))
+  // server: {
+  //   deps: {
+  //     inline: ['element-plus']
+  //   }
+  // },
 }

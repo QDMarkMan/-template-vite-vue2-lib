@@ -5,6 +5,4 @@
  *-------------------------------------------------------------------------------------------- */
 const config = require('./config/prettier/prettier.cjs')
 
-module.exports = {
-	...config
-}
+module.exports = config
