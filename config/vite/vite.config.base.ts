@@ -1,4 +1,4 @@
-import { resolve } from 'path'
+import { resolve, join } from 'path'
 import { defineConfig, mergeConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -6,9 +6,10 @@ import { configHtmlPlugin } from './plugin/html'
 import VitestConfig from './utils/vitest'
 
 const root = resolve(__dirname, '../../')
-const packages = resolve(__dirname, '../../packages')
+const packages = join(root, 'packages')
 
 const BaseConfig = defineConfig({
+  root: packages,
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
